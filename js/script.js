@@ -924,7 +924,7 @@ const web = [
     "https://easyoffer.ru/question/324",
     "https://easyoffer.ru/question/325",
     "https://easyoffer.ru/question/326",
-    "https://easyoffer.ru/question/327",
+    "https://easyoffer.ru/question/327"
 ]
 
 const asyn = [
@@ -961,7 +961,7 @@ const asyn = [
     "https://easyoffer.ru/question/256"
 ]
 
-var links = {
+const links = {
     'python': python,
     'algorithms_structures': algorithms_structures,
     'testing': testing,
@@ -981,22 +981,26 @@ var links = {
 };
 
 function generateRandomLink() {
+    var selectedCategories = Array.from(document.querySelectorAll('.checkbox-group input[type="checkbox"]:checked'))
+        .map(function (checkbox) {
+            return links[checkbox.id];
+        });
 
-    var selectedLinks = Object.keys(links).reduce(function (acc, id) {
-        if (document.getElementById(id).checked) {
-            return acc.concat(links[id]);
-        }
-        return acc;
-    }, []);
+    // Выбираем одну случайную категорию
+    var randomCategoryIndex = Math.floor(Math.random() * selectedCategories.length);
+    var randomCategory = selectedCategories[randomCategoryIndex];
 
-    var randomIndex = Math.floor(Math.random() * selectedLinks.length);
-    var randomLink = selectedLinks[randomIndex];
+    // Теперь выбираем одну случайную ссылку из выбранной категории
+    var randomLinkIndex = Math.floor(Math.random() * randomCategory.length);
+    var randomLink = randomCategory[randomLinkIndex];
 
+    // Создаем элемент ссылки
     var linkElement = document.createElement('a');
     linkElement.href = randomLink;
     linkElement.textContent = "Случайный вопрос";
     linkElement.target = "_blank";
 
+    // Очищаем контейнер и добавляем новую ссылку
     var container = document.getElementById('random-link-container');
     container.innerHTML = '';
     container.appendChild(linkElement);

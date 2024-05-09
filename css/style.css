@@ -1,0 +1,87 @@
+body {
+    background:#333333;
+    color:beige;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    display: none;
+  }
+  
+  .checkbox-group label {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    cursor: pointer;
+    border: 1px solid #999999;
+    border-radius: 5px;
+  }
+  
+  .checkbox-group input[type="checkbox"]:checked + label {
+    background-color: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+  }
+
+#random-link-container{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#random-link-container a{
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 40px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+#random-link-container a:hover{
+    background-color: #0065d1;
+}
+
+#footer {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+span {
+    position:static;
+}
+
+#your_link{
+    display: flex;
+    justify-content: center;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+#your_link:hover {
+    background-color: #0065d1;
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover{
+    background-color: #0065d1;
+}

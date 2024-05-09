@@ -5,40 +5,67 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 <link rel="manifest" href="favicon/site.webmanifest">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <meta charset="UTF-8">
 <title>Случайная ссылка</title>
 </head>
+
+
 <body>
+<!-- <div id="checkboxs">
+    <label><input type="checkbox" id="python"> Python</label>
+    <label><input type="checkbox" id="algorithms_structures"> Алгоритмы, структуры</label>
+    <label><input type="checkbox" id="testing">Тестирование</label>
+    <label><input type="checkbox" id="oop">ООП</label>
+    <label><input type="checkbox" id="db">Базы данных</label>
+    <label><input type="checkbox" id="tools">tools</label>
+    <label><input type="checkbox" id="orm">ORM</label>
+    <label><input type="checkbox" id="https_api">https/api</label>
+    <label><input type="checkbox" id="gil">GIL</label>
+    <label><input type="checkbox" id="fastapi">FastApi</label>
+    <label><input type="checkbox" id="django">Django</label>
+    <label><input type="checkbox" id="best_practices">Best practices</label>
+    <label><input type="checkbox" id="frameworks">Фреймворки</label>
+    <label><input type="checkbox" id="moduls">Модули</label>
+    <label><input type="checkbox" id="web">Веб-разработка</label>
+    <label><input type="checkbox" id="asyn">Асинхронность</label>
+</div> -->
 
-
-<label><input type="checkbox" id="python"> Python</label>
-<label><input type="checkbox" id="algorithms_structures"> Алгоритмы, структуры</label>
-<label><input type="checkbox" id="testing">Тестирование</label>
-<label><input type="checkbox" id="oop">ООП</label>
-<label><input type="checkbox" id="db">Базы данных</label>
-<label><input type="checkbox" id="tools">tools</label>
-<label><input type="checkbox" id="orm">ORM</label>
-<label><input type="checkbox" id="https_api">https/api</label>
-<label><input type="checkbox" id="gil">GIL</label>
-<label><input type="checkbox" id="fastapi">FastApi</label>
-<label><input type="checkbox" id="django">Django</label>
-<label><input type="checkbox" id="best_practices">Best practices</label>
-<label><input type="checkbox" id="frameworks">Фреймворки</label>
-<label><input type="checkbox" id="moduls">Модули</label>
-<label><input type="checkbox" id="web">Веб-разработка</label>
-<label><input type="checkbox" id="asyn">Асинхронность</label>
+<div class="checkbox-group">
+    <input type="checkbox" id="python"> <label for="python">Python</label>
+    <input type="checkbox" id="algorithms_structures"> <label for="algorithms_structures">Алгоритмы, структуры</label>
+    <input type="checkbox" id="testing"> <label for="testing">Тестирование</label>
+    <input type="checkbox" id="oop"> <label for="oop">ООП</label>
+    <input type="checkbox" id="db"> <label for="db">Базы данных</label>
+    <input type="checkbox" id="tools"> <label for="tools">tools</label>
+    <input type="checkbox" id="orm"> <label for="orm">ORM</label>
+    <input type="checkbox" id="https_api"> <label for="https_api">https/api</label>
+    <input type="checkbox" id="gil"> <label for="gil">GIL</label>
+    <input type="checkbox" id="fastapi"> <label for="fastapi">FastApi</label>
+    <input type="checkbox" id="django"> <label for="django">Django</label>
+    <input type="checkbox" id="best_practices"> <label for="best_practices">Best practices</label>
+    <input type="checkbox" id="frameworks"> <label for="frameworks">Фреймворки</label>
+    <input type="checkbox" id="web"> <label for="web">Веб-разработка</label>
+    <input type="checkbox" id="asyn"> <label for="asyn">Асинхронность</label>
+  
+</div>
+  
 
 
 <div id="random-link-container">
-  
+
 </div>
 
-<a id="your_link" href="#">
-    <div id="update_access">Обновить доступ</div>
-</a>
 
-<input type="text" id="auth_link" placeholder="Введи свою ссылку доступа">
-<button onclick="saveLink()">Сохранить</button>
+<div id="footer">
+    <a id="your_link" href="#">
+        <div id="update_access">Обновить доступ</div>
+    </a>
+    
+    <input type="text" id="auth_link" placeholder="Введи свою ссылку доступа">
+    <button onclick="saveLink()">Сохранить</button>
+    
+</div>
 
 <script src="js/script.js"></script>
 
