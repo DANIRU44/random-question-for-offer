@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     justify-content: center;
+    align-items: center;
   }
 
   .checkbox-group input[type="checkbox"] {
@@ -27,20 +28,27 @@ body {
   }
 
 #random-link-container{
-    margin-top: 15vh;
+    margin-top: 30vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 5px;
 }
 
 #random-link-container a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background-color: #007bff;
     color: #ffffff;
     text-decoration: none;
     border-radius: 10px;
-    padding: 40px;
-    font-size: large;
+    width: 30%;
+    height: 20vh;
+    font-size: 3em;
     font-weight: bolder;
+    padding: 10px;
 }
 
 #random-link-container a:hover{
@@ -55,24 +63,31 @@ body {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-span {
-    position:static;
+    margin-bottom: 30px;
 }
 
 #your_link{
     display: flex;
+    align-items: center;
     justify-content: center;
+    text-align: center;
     background-color: #007bff;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
-    padding: 10px;
+    width: 15vw;
+    height: 5vh;
 }
 #your_link:hover {
     background-color: #0065d1;
+}
+
+#auth_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
 }
 
 button {
@@ -80,6 +95,12 @@ button {
     color: #ffffff;
     border-radius: 5px;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 15vw;
+    height: 4vh;
 }
 
 button:hover{

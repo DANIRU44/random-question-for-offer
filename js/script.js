@@ -1010,6 +1010,7 @@ function saveCheckboxState() {
     Object.keys(links).forEach(function (id) {
         localStorage.setItem(id, document.getElementById(id).checked);
     });
+    generateRandomLink();
 }
 
 // Оптимизированная функция восстановления состояния чекбоксов
@@ -1020,6 +1021,7 @@ function restoreCheckboxState() {
             checkbox.checked = (localStorage.getItem(id) === 'true');
         }
     });
+
 }
 
 // Прикрепляем функцию сохранения к событию изменения для всех чекбоксов
