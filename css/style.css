@@ -28,7 +28,7 @@ body {
   }
 
 #random-link-container{
-    margin-top: 30vh;
+    margin-top: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,15 +44,29 @@ body {
     color: #ffffff;
     text-decoration: none;
     border-radius: 10px;
-    width: 30%;
-    height: 20vh;
-    font-size: 3em;
+    width: 20%;
+    height: 10vh;
+    font-size: 1.5em;
     font-weight: bolder;
     padding: 10px;
 }
 
 #random-link-container a:hover{
     background-color: #0065d1;
+}
+
+#refresh {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#refresh img:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+    transform: scale(1.1);
 }
 
 #footer {
