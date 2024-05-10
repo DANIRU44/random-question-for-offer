@@ -96,15 +96,23 @@ body {
     background-color: #0065d1;
 }
 
+#container {
+    height: 8vh;
+    width: 15vw;
+}
+
 #auth_link {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 30px;
+    height: 4vh;
+    width: 14.7vw;
 }
 
 button {
+    position: relative;
     background-color: #007bff;
     color: #ffffff;
     border-radius: 5px;
@@ -197,7 +205,7 @@ button:hover{
         align-items: center;
         justify-content: center;
         text-align: center;
-        width: 17.5vw;
+        width: 17vw;
         height: 3vh;
         font-size: 1.5em;
     }
