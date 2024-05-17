@@ -130,6 +130,26 @@ button:hover{
 }
 
 @media screen and (max-width:1000px){
+    .checkbox-group input[type="checkbox"] {
+        display: none;
+      }
+      
+      .checkbox-group label {
+        display: inline-block;
+        padding: 0.5em 1em;
+        margin: 1em;
+        cursor: pointer;
+        border: 1px solid #999999;
+        border-radius: 5px;
+        font-size: 1.6em;
+      }
+      
+      .checkbox-group input[type="checkbox"]:checked + label {
+        background-color: #007bff;
+        color: #ffffff;
+        border-color: #007bff;
+      }
+
     #random-link-container {
         margin-top: 20vh;
         display: flex;
@@ -147,7 +167,7 @@ button:hover{
         text-decoration: none;
         border-radius: 10px;
         width: 40%;
-        height: 10vh;
+        height: 23vh;
         font-size: 3em;
         font-weight: bolder;
         padding: 10px;
@@ -159,15 +179,19 @@ button:hover{
         align-items: center;
         justify-content: center;
         text-align: center;
+        
     }
-    
+    #refresh img {
+        width: 80px;
+        height: 80px;
+    }
+
     #refresh img:hover {
         background-color: #007bff;
-        border-radius: 5px;
+        border-radius: 10px;
         transform: scale(1.1);
-        width: 60px;
-        height: 60px;
     }
+
     #footer {
         display: flex;
         position: absolute;
@@ -177,6 +201,7 @@ button:hover{
         transform: translateX(-50%);
         margin-top: 15px;
         margin-bottom: 30px;
+        width: auto;
     }
     #your_link{
         display: flex;
@@ -187,13 +212,14 @@ button:hover{
         color: #ffffff;
         text-decoration: none;
         border-radius: 5px;
-        width: 15vw;
+        width: 18vw;
         height: 5vh;
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     #container {
         height: 5vh;
+        width: auto;
     }
 
     button {
@@ -205,9 +231,11 @@ button:hover{
         align-items: center;
         justify-content: center;
         text-align: center;
-        width: 17vw;
+        width: auto;
         height: 3vh;
-        font-size: 1.5em;
+        font-size: 1.8em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
 
     #auth_link {
@@ -216,6 +244,7 @@ button:hover{
         justify-content: center;
         text-align: center;
         height: 2vh;
-        width: 17vw;
+        width: auto;
+        padding: auto;
     }
 }
