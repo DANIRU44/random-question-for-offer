@@ -1041,10 +1041,28 @@ window.onload = function () {
 
 var savedText = localStorage.getItem('auth_link');
 if (savedText) {
-    document.getElementById('auth_link').value = savedText;
+    document.getElementById('form-control').value = savedText;
     document.getElementById('your_link').href = savedText;
 }
 function saveLink() {
-    var textToSave = document.getElementById('auth_link').value;
+    var textToSave = document.getElementById('form-control').value;
     localStorage.setItem('auth_link', textToSave);
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    /* Contact Form Interactions */
+    document.getElementById('btnOpenForm').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        document.getElementsByClassName('form-popup-bg')[0].classList.add('is-visible');
+    });
+
+    //close popup when clicking x or off popup
+    document.getElementsByClassName('form-popup-bg')[0].addEventListener('click', function (event) {
+        if (event.target.classList.contains('form-popup-bg') || event.target.id === 'btnCloseForm') {
+            event.preventDefault();
+            this.classList.remove('is-visible');
+        }
+    });
+});

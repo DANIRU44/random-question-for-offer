@@ -70,63 +70,119 @@ body {
 }
 
 #footer {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 15px;
-    margin-bottom: 30px;
+    position: relative;
+    
 }
 
-#your_link{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #007bff;
-    color: #ffffff;
+#btnOpenForm {
+   display: flex;
+   position: absolute;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   background-color: #007bff;
+   color: #ffffff;
+   text-decoration: none;
+   border-radius: 5px;
+   width: 15vw;
+   height: 5vh;
+   left: 50%;
+   bottom: -35vh;
+   transform: translateX(-50%);
+}
+
+.form-popup-bg {
+ position:absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ display: flex;
+ flex-direction: column;
+ align-content: center;
+ justify-content: center;
+}
+.form-popup-bg {
+ position: fixed;
+ left: 0;
+ top: 0;
+ height: 100%;
+ width: 100%;
+ background-color: rgba(94, 110, 141, 0.9);
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+ -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+ transition: opacity 0.3s 0s, visibility 0s 0.3s;
+ overflow-y: auto;
+ z-index: 10000;
+}
+.form-popup-bg.is-visible {
+ opacity: 1;
+ visibility: visible;
+ -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+ -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+ transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+.form-container {
+   background-color: #2d3638;
+   border-radius: 10px;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   max-width: 700px;
+   margin-left: auto;
+   margin-right: auto;
+   position:relative;
+ padding: 40px;
+ color: #fff;
+}
+
+.form-container a{
+    color: white;
+}
+.close-button {
+ background:none;
+ color: #fff;
+ width: 40px;
+ height: 40px;
+ position: absolute;
+ top: 0;
+ right: 0;
+ border: solid 1px #fff;
+}
+
+.form-popup-bg:before{
+   content:'';
+   background-color: #fff;
+ opacity: .25;
+ position:absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+}
+
+#form-control {
+    position: relative;
+    width: 50%;
+    height: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+#your_link {
     text-decoration: none;
-    border-radius: 5px;
-    width: 15vw;
-    height: 5vh;
 }
-#your_link:hover {
-    background-color: #0065d1;
-}
-
-#container {
-    height: 8vh;
-    width: 15vw;
-}
-
-#auth_link {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 4vh;
-    width: 14.7vw;
-}
-
-button {
-    position: relative;
+#update_access {
+    display: inline;
+    color: white;
     background-color: #007bff;
-    color: #ffffff;
-    border-radius: 5px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 15vw;
-    height: 4vh;
-}
-
-button:hover{
-    background-color: #0065d1;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-left: 20px;
 }
 
 @media screen and (max-width:1000px){
@@ -151,7 +207,7 @@ button:hover{
       }
 
     #random-link-container {
-        margin-top: 20vh;
+        margin-top: 17vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -167,7 +223,7 @@ button:hover{
         text-decoration: none;
         border-radius: 10px;
         width: 40%;
-        height: 23vh;
+        height: 20vh;
         font-size: 3em;
         font-weight: bolder;
         padding: 10px;
@@ -193,58 +249,25 @@ button:hover{
     }
 
     #footer {
-        display: flex;
-        position: absolute;
-        flex-direction: row;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-top: 15px;
-        margin-bottom: 30px;
-        width: auto;
+        bottom: 20vh;
+        font-size: 2em;
     }
-    #your_link{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background-color: #007bff;
-        color: #ffffff;
-        text-decoration: none;
+
+    #buttons button{
+        font-size: 1em;
+    }
+
+    #form-control {
+        position: relative;
+        width: 50%;
+        height: 30px;
         border-radius: 5px;
-        width: 18vw;
-        height: 5vh;
-        font-size: 1.8em;
+        margin-bottom: 20px;
+        font-size: 1em;
     }
 
-    #container {
-        height: 5vh;
-        width: auto;
-    }
-
-    button {
-        background-color: #007bff;
-        color: #ffffff;
-        border-radius: 5px;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        width: auto;
-        height: 3vh;
-        font-size: 1.8em;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-    }
-
-    #auth_link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 2vh;
-        width: auto;
-        padding: auto;
+    #btnOpenForm {
+        font-size: 1em;
+        width: fit-content;
     }
 }

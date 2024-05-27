@@ -56,14 +56,26 @@
 <div id="refresh" onclick="location.reload()"><img src="icons/refresh.svg" alt="обновить ссылку"></div>
 
 <div id="footer">
-    <a id="your_link" href="#">
-        <div id="update_access">Обновить доступ</div>
-    </a>
-    <div id="container">
-        <input type="text" id="auth_link" placeholder="Введи свою ссылку доступа">
-        <button onclick="saveLink()">Сохранить</button>
-    </div>
+    <button id="btnOpenForm">Обновить доступ</button>
+  
+    <div class="form-popup-bg">
+      <div class="form-container">
+        <button id="btnCloseForm" class="close-button">X</button>
+  
+        <p>Вставь свою персональную <a href="https://t.me/easyoffer_bot">ссылку</a></p>
+          <div class="form-group">
+            <input type="text" id="form-control" />
+          </div>
 
+          <div id="buttons">
+            <button onclick="saveLink()">Сохранить</button>
+            <a id="your_link" href="#">
+                <div id="update_access">Перейти</div>
+            </a>
+          </div>
+          
+      </div>
+    </div>
 </div>
 
 <script src="js/script.js"></script>
